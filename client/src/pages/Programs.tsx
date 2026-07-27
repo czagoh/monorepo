@@ -13,7 +13,7 @@ const Programs = () => {
   const [programs, setPrograms] = useState<Program[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3310/api/programs")
+    fetch(`${import.meta.env.VITE_API_URL}/api/programs`)
       .then((response) => response.json())
       .then((data) => setPrograms(data))
       .catch((error) => console.error(error));
