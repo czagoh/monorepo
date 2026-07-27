@@ -13,6 +13,11 @@ router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
 router.post("/api/items", itemActions.add);
 
-/* ************************************************************************* */
+/* ************************ Welcome to router ************************************************* */
 
+import sayActions from "./modules/item/say/sayActions";
+
+router.get("/", sayActions.sayWelcome);
+
+/* ************************************************************************* */
 export default router;
